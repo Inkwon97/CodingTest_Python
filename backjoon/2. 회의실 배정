@@ -1,0 +1,23 @@
+import sys
+sys.stdin = open("./backjoon/input/input2.txt", "rt")
+
+n = int(input())
+meeting = []
+
+for _ in range(n):
+    start, end = map(int, input().split())
+    meeting.append((start, end))
+
+meeting.sort(key = lambda x : (x[1], x[0]))
+print(meeting)
+
+# 1. curEnd < s , curEnd = e를 대입 cnt++
+
+cnt = 0
+curEnd =  0
+for s, e in meeting:
+    
+    if curEnd <= s:
+        curEnd = e
+        cnt += 1
+print(cnt)
