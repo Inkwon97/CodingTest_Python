@@ -1,8 +1,12 @@
-import requests
-target = "http://google.com"
+import sys
+sys.stdin = open("input.txt", "rt")
+input = sys.stdin.readline
 
-request = requests.get(url=target)
+word = [0] + list(map(int, input().rstrip()))
 
-html = requests.text.strip()
+dp = [0] * (len(word) + 1)
+dp[0] = 1
+print(word)
+# for i in range(1, len(word) + 1):
 
-print(html)
+
