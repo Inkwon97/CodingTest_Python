@@ -77,7 +77,12 @@
         
         // 정수의 최댓값을 return
         
-        class Solution {
+        class Solution {package 프로그래머스;
+        
+        public class 11. 햄버거 만들기 {
+            
+        }
+        
             int solution(int[][] land) {
                 int answer = 0;
                 
